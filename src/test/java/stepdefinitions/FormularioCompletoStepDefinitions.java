@@ -24,20 +24,15 @@ public class FormularioCompletoStepDefinitions {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given( "que {string} navega a la pagina de formulario de DemoQA")
-    public void navegarAPagina(String nombreActor){
-        theActorCalled(nombreActor).attemptsTo(Open.url("https://demoqa.com/automation-practice-form"));
-    }
-    @When("ingresa la totalidad de la informacion del formulario")
+    @When("diligencia el formulario completo con la siguiente informacion:")
     public void ingresaTodosLosDatos(DataTable dataTable){
         // Convierte la fila de la tabla en un Mapa Clave -> Valor
         Map<String, String> datos = dataTable.asMaps(String.class, String.class).get(0);
 
         theActorInTheSpotlight().attemptsTo(DiligenciarFormularioCompleto.conDatos(datos));
     }
-    @Then("deberia ver el titulo {string} en la pantalla")
+    @Then("deberia ver el titulo de confirmacion {string} en la pantalla")
     public void verificarTitulo(String tituloEsperado){
         theActorInTheSpotlight().should(seeThat(ElTituloDelModal.es(), equalTo(tituloEsperado)));
-        //theActorInTheSpotlight().should(seeThat());
     }
 }

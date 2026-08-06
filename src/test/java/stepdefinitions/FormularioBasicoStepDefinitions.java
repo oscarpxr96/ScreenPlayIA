@@ -27,11 +27,11 @@ public class FormularioBasicoStepDefinitions {
         theActorCalled(nombreActor).attemptsTo(Open.url("https://demoqa.com/automation-practice-form"));
     }
     @When("ingresa sus datos personales {string}, {string}, {string} y {string}")
-    public void ingresaDatos(String nombre, String apellido, String telefono, String correo) {
+    public void ingresaDatosBasicos(String nombre, String apellido, String telefono, String correo) {
         theActorInTheSpotlight().attemptsTo(DiligenciarFormularioBasico.conDatos(nombre, apellido, telefono, correo));
     }
     @Then("deberia ver el titulo {string} en la pantalla")
-    public void verificarTitulo(String tituloEsperado) {
+    public void verificarTituloFormularioBasico(String tituloEsperado) {
         theActorInTheSpotlight().should(seeThat(ElTituloDelModal.es(), equalTo(tituloEsperado)));
     }
 

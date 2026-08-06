@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
     features = "src/test/resources/features/formulario.feature",
     glue = "stepdefinitions",
+    //tags = "@formularioCompleto",
     plugin = {
             "pretty",
             "html:target/cucumber-reports/cucumber.html",

@@ -5,6 +5,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.waits.Wait;
 
 import java.util.Map;
 
@@ -35,11 +37,12 @@ public class DiligenciarFormularioCompleto implements Task {
                 Enter.theValue(datosFormulario.get("email")).into(CAMPO_EMAIL),
                 Click.on(BOTON_SEXO_MASCULINO),
                 Enter.theValue(datosFormulario.get("telefono")).into(CAMPO_TELEFENO),
-                SeleccionarFechaNacimiento.conFecha("May","1976","9")
-
-
-                //Enter.theValue(datosFormulario.get("direccion")).into()
-
+                SeleccionarFechaNacimiento.conFecha("May","1976","9"),
+                Scroll.to(CAMPO_TEMAS),
+                Click.on(BOTON_HOBBIES_SPORTS),
+                Enter.theValue("Calle Falsa 123").into(CAMPO_DIRECCION_ACTUAL),
+                Scroll.to(BOTON_SUBMIT),
+                Click.on(BOTON_SUBMIT)
         );
 
     }
