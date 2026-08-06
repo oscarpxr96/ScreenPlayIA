@@ -7,13 +7,14 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTituloDelModal;
+import questions.ElTextoDelElemento;
 import tasks.DiligenciarFormularioBasico;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
+import static userinterfaces.FormularioUI.TITULO_MODAL;
 
 public class FormularioBasicoStepDefinitions {
     @Before
@@ -32,7 +33,7 @@ public class FormularioBasicoStepDefinitions {
     }
     @Then("deberia ver el titulo {string} en la pantalla")
     public void verificarTituloFormularioBasico(String tituloEsperado) {
-        theActorInTheSpotlight().should(seeThat(ElTituloDelModal.es(), equalTo(tituloEsperado)));
+        theActorInTheSpotlight().should(seeThat(ElTextoDelElemento.es(TITULO_MODAL), equalTo(tituloEsperado)));
     }
 
 }

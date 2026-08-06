@@ -2,21 +2,19 @@ package stepdefinitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTituloDelModal;
+import questions.ElTextoDelElemento;
 import tasks.DiligenciarFormularioCompleto;
 
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
+import static userinterfaces.FormularioUI.TITULO_MODAL;
 
 public class FormularioCompletoStepDefinitions {
     @Before
@@ -33,6 +31,6 @@ public class FormularioCompletoStepDefinitions {
     }
     @Then("deberia ver el titulo de confirmacion {string} en la pantalla")
     public void verificarTitulo(String tituloEsperado){
-        theActorInTheSpotlight().should(seeThat(ElTituloDelModal.es(), equalTo(tituloEsperado)));
+        theActorInTheSpotlight().should(seeThat(ElTextoDelElemento.es(TITULO_MODAL), equalTo(tituloEsperado)));
     }
 }

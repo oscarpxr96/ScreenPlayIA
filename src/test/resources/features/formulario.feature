@@ -1,4 +1,4 @@
-Feature: Diligenciamiento de Formulario de Estudiantes
+Feature: Diligenciamiento de Formulario
 
   Background:
     Given que "Oscar" navega a la pagina de formulario de DemoQA
