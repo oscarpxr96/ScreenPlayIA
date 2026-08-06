@@ -26,17 +26,18 @@ public class FormularioUI {
     public static final Target CAMPO_TELEFENO = Target.the("Campo de telefono")
             .located(By.id("userNumber"));
 
-    public static final Target BOTON_FECHA_NACIMIENTO = Target.the("Boton de fecha de nacimiento")
+    public static final Target CAMPO_FECHA_NACIMIENTO = Target.the("Campo fecha de nacimiento")
             .located(By.id("dateOfBirthInput"));
 
-    public static final Target BOTON_DIA_NACIMIENTO = Target.the("Boton de dia de nacimiento")
-            .located(By.xpath("//div[contains(@class, 'react-datepicker__day--015') and not(contains(@class, 'outside-month'))]"));
+    public static final Target DESPLEGABLE_MES = Target.the("Desplegable de mes")
+            .located(By.className("react-datepicker__month-select"));
 
-    public static final Target BOTON_MES_NACIMIENTO = Target.the("Boton de mes de nacimiento")
-            .located(By.xpath("//select[@class='react-datepicker__month-select']"));
+    public static final Target DESPLEGABLE_ANIO = Target.the("Desplegable de año")
+            .located(By.className("react-datepicker__year-select"));
 
-    public static final Target BOTON_ANO_NACIMIENTO =  Target.the("Boton de año de nacimiento")
-            .located(By.id("subjectsInput"));
+    // Selector dinámico para encontrar el día exacto en el calendario
+    public static final Target OPCION_DIA = Target.the("Día del calendario {0}")
+            .locatedBy("//div[contains(@class,'react-datepicker__day') and not(contains(@class,'outside-month')) and text()='{0}']");
 
     public static final Target CAMPO_TEMAS = Target.the("Campo de temas")
             .located(By.xpath("//*[@id='genterWrapper']/div[2]/div[1]/label"));
