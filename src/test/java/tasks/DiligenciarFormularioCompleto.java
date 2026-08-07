@@ -42,7 +42,9 @@ public class DiligenciarFormularioCompleto implements Task {
                 Click.on(BOTON_HOBBIES_SPORTS),
                 Enter.theValue("Calle Falsa 123").into(CAMPO_DIRECCION_ACTUAL),
                 Scroll.to(BOTON_SUBMIT),
-                Click.on(BOTON_SUBMIT)
+                Click.on(BOTON_SUBMIT),
+                Scroll.to(BOTON_CLOSE),
+                Click.on(BOTON_CLOSE)
         );
 
     }

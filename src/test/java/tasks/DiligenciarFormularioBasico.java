@@ -39,7 +39,8 @@ public class DiligenciarFormularioBasico implements Task {
                 Enter.theValue(eMail).into(CAMPO_EMAIL),
                 Click.on(BOTON_SEXO_MASCULINO),
                 Scroll.to(BOTON_SUBMIT),
-                Click.on(BOTON_SUBMIT)
+                Click.on(BOTON_SUBMIT),
+                Click.on(BOTON_CLOSE)
         );
     }
 }

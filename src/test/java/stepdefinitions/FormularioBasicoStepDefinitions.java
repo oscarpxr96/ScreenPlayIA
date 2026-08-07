@@ -1,9 +1,11 @@
 package stepdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -34,6 +36,10 @@ public class FormularioBasicoStepDefinitions {
     @Then("deberia ver el titulo {string} en la pantalla")
     public void verificarTituloFormularioBasico(String tituloEsperado) {
         theActorInTheSpotlight().should(seeThat(ElTextoDelElemento.es(TITULO_MODAL), equalTo(tituloEsperado)));
+    }
+    @After
+    public static void reiniciarNavegador() {
+        Serenity.getWebdriverManager().closeDriver();
     }
 
 }

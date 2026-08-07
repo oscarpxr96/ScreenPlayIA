@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 
 public class IFrameUI {
 
+    public static final Target TITULO_PAGINA_FRAME = Target.the("Titulo pagina princial")
+            .located(By.xpath("//*[@id='framesWrapper']/h1"));
+
     public static final Target FRAME_1 = Target.the("IFrame 1 princial")
             .located(By.id("frame1"));
 

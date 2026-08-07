@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class FormularioUI {
 
     // Target reemplaza al tradicional "By".
-    // El método .the("...") asigna un nombre legible que Serenity usará en el reporte visual.
+    // El metodo .the("...") asigna un nombre legible que Serenity usará en el reporte visual.
 
     public static final Target TITULO_FORMULARIO = Target.the("Titulo inicial del formulario")
             .located(By.xpath("//*[@id=\"app\"]/div/div/div/div[2]/div[2]/h1"));

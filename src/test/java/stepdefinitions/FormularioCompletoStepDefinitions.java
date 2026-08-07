@@ -1,9 +1,11 @@
 package stepdefinitions;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import questions.ElTextoDelElemento;
@@ -32,5 +34,9 @@ public class FormularioCompletoStepDefinitions {
     @Then("deberia ver el titulo de confirmacion {string} en la pantalla")
     public void verificarTitulo(String tituloEsperado){
         theActorInTheSpotlight().should(seeThat(ElTextoDelElemento.es(TITULO_MODAL), equalTo(tituloEsperado)));
+    }
+    @After
+    public static void reiniciarNavegador() {
+        Serenity.getWebdriverManager().closeDriver();
     }
 }
