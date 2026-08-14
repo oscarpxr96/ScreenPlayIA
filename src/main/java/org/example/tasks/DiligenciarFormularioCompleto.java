@@ -1,17 +1,16 @@
-package tasks;
+package org.example.tasks;
 
-import interactions.SeleccionarFechaNacimiento;
+import org.example.interactions.SeleccionarFechaNacimiento;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.waits.Wait;
 
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static userinterfaces.FormularioUI.*;
+import static org.example.userinterfaces.FormularioUI.*;
 
 public class DiligenciarFormularioCompleto implements Task {
 

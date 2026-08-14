@@ -1,4 +1,4 @@
-package tasks;
+package org.example.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static userinterfaces.DragAndDropUI.*;
+import static org.example.userinterfaces.DragAndDropUI.*;
 
 public class DragAndDrop implements Task {
 

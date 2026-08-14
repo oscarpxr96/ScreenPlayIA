@@ -1,4 +1,4 @@
-package tasks;
+package org.example.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
 
-import static userinterfaces.FormularioUI.*;
+import static org.example.userinterfaces.FormularioUI.*;
 
 public class DiligenciarFormularioBasico implements Task {
     // 0. Declarar variables

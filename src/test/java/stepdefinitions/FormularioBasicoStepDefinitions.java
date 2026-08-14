@@ -9,14 +9,14 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTextoDelElemento;
-import tasks.DiligenciarFormularioBasico;
+import org.example.questions.ElTextoDelElemento;
+import org.example.tasks.DiligenciarFormularioBasico;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
-import static userinterfaces.FormularioUI.TITULO_MODAL;
+import static org.example.userinterfaces.FormularioUI.TITULO_MODAL;
 
 public class FormularioBasicoStepDefinitions {
     @Before

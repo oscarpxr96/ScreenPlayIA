@@ -9,13 +9,13 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTextoDelElemento;
-import tasks.DragAndDrop;
+import org.example.questions.ElTextoDelElemento;
+import org.example.tasks.DragAndDrop;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
-import static userinterfaces.DragAndDropUI.TITULO_DROPPABLE;
+import static org.example.userinterfaces.DragAndDropUI.TITULO_DROPPABLE;
 
 public class DragAndDropStepDefinition {
 

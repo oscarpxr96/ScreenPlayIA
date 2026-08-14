@@ -8,15 +8,15 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTextoDelElemento;
-import tasks.DiligenciarFormularioCompleto;
+import org.example.questions.ElTextoDelElemento;
+import org.example.tasks.DiligenciarFormularioCompleto;
 
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
-import static userinterfaces.FormularioUI.TITULO_MODAL;
+import static org.example.userinterfaces.FormularioUI.TITULO_MODAL;
 
 public class FormularioCompletoStepDefinitions {
     @Before

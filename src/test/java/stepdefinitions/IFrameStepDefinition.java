@@ -9,14 +9,14 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import questions.ElTextoDelElemento;
-import tasks.ManejoIFrames;
-import userinterfaces.IFrameUI;
+import org.example.questions.ElTextoDelElemento;
+import org.example.tasks.ManejoIFrames;
+import org.example.userinterfaces.IFrameUI;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.example.userinterfaces.IFrameUI.*;
 import static org.hamcrest.Matchers.equalTo;
-import static userinterfaces.IFrameUI.*;
 
 
 public class IFrameStepDefinition {

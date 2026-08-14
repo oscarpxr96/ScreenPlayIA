@@ -1,4 +1,4 @@
-package interactions;
+package org.example.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static userinterfaces.FormularioUI.*;
+import static org.example.userinterfaces.FormularioUI.*;
 
 public class SeleccionarFechaNacimiento implements Interaction {
     private String mes;
