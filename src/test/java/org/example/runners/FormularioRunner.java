@@ -1,4 +1,4 @@
-package runners;
+package org.example.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-    features = "src/test/resources/features/IFrame.feature",
-    glue = "stepdefinitions",
+    features = "src/test/resources/features/formulario.feature",
+    glue = "org/example/stepdefinitions",
     //tags = "@formularioCompleto",
     plugin = {
             "pretty",
@@ -16,6 +16,6 @@ import org.junit.runner.RunWith;
         },
     snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class IFrameRunner {
+public class FormularioRunner {
 
 }

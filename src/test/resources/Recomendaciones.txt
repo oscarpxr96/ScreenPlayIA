@@ -1,0 +1,11 @@
+*Para ejecutar la automatizacion y generar el reporte se debe ejecutar:
+mvn clean verify
+
+*Para ejecutar la automatizacion de algun runner especifico
+y generar el reporte se debe ejecutar:
+mvn clean verify -Dtest=NOMBREDELRUNNER
+    ejemplo: mvn clean verify -Dtest=E2ERunner
+
+*Para ver el reporte completo esta en la ruta target/site/serenity/index.html
+
+*Para ver el reporte resumido esta en la ruta target/site/serenity/serenity-summary.html
