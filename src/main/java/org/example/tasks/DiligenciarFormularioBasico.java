@@ -29,7 +29,7 @@ public class DiligenciarFormularioBasico implements Task {
         return Tasks.instrumented(DiligenciarFormularioBasico.class, nombre, apellido, telefono, eMail);
     }
 
-    // 3. performAs: Aquí el Actor ejecuta las acciones dentro de la UI
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

@@ -28,7 +28,6 @@ public class ManejoIFrames implements Task {
         // Guarda el texto en la sesión del actor con una clave
         actor.remember("TITULO_IFRAME_1", titulo1);
         actor.attemptsTo(Switch.toDefaultContext());
-        System.out.println("el titulo 1 es: "+titulo1);
 
         // ESPERA EXPLÍCITA: Darle tiempo a Serenity de reubicar el contexto principal
         actor.attemptsTo(
@@ -37,7 +36,6 @@ public class ManejoIFrames implements Task {
         String titulo2 = actor.asksFor(Text.of(IFrameUI.TITULO_PAGINA_FRAME));
         // Guarda el texto en la sesión del actor con una clave
         actor.remember("TITULO_PAGINA_FRAME", titulo2);
-        System.out.println("el titulo 2 es: "+titulo2);
 
     }
 }

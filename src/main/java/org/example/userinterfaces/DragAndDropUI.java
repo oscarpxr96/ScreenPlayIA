@@ -1,9 +1,10 @@
 package org.example.userinterfaces;
 
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class DragAndDropUI {
+public class DragAndDropUI extends PageObject {
 
     public static final Target TITULO_DRAGGABLE_PAGINA = Target.the("Titulo Pagina")
             .located(By.xpath("//h1[text()='Droppable']"));

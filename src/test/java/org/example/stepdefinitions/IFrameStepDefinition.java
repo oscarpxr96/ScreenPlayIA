@@ -32,7 +32,6 @@ public class IFrameStepDefinition {
     }
     @When("accede al IFrame1")
     public void accede_al_i_frame1() {
-        //theActorInTheSpotlight().should(seeThat(ElTextoDelElemento.es(TITULO_MODAL), equalTo("Frames")));
         theActorInTheSpotlight().attemptsTo(ManejoIFrames.realizado());
     }
 

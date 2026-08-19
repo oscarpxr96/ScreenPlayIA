@@ -1,9 +1,10 @@
 package org.example.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class IFrameUI {
+public class IFrameUI extends PageObject {
 
     public static final Target TITULO_PAGINA_FRAME = Target.the("Titulo pagina princial")
             .located(By.xpath("//*[@id='framesWrapper']/h1"));
@@ -20,5 +21,5 @@ public class IFrameUI {
 
     public static final Target TITULO_FRAME_2 = Target.the("Titulo delIFrame 2 princial")
             .located(By.xpath("//*[@id='sampleHeading']"))
-            .inIFrame(By.id("frame2"));;
+            .inIFrame(By.id("frame2"));
 }

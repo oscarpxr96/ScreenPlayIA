@@ -22,7 +22,6 @@ public class DragAndDrop implements Task {
         actor.attemptsTo(
                 WaitUntil.the(TITULO_DRAGGABLE_PAGINA,isVisible()).forNoMoreThan(10).seconds()
         );
-        System.out.println("Titulo droppable visible");
         actor.attemptsTo(
                 Scroll.to(BOTON_DRAGGABLE),
                 Scroll.to(BOTON_DROPPABLE),

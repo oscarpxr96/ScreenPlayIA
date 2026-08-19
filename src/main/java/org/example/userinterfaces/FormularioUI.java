@@ -1,9 +1,10 @@
 package org.example.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class FormularioUI {
+public class FormularioUI extends PageObject {
 
     // Target reemplaza al tradicional "By".
     // El metodo .the("...") asigna un nombre legible que Serenity usará en el reporte visual.
